@@ -1,100 +1,15 @@
-<!-- A seguir, você verá um trecho de código HTML e CSS .
-Crie um arquivo HTML dentro do diretório exercises/javascript-dom-eventos-e-web-storage_1 e copie o código a seguir.
-Leia as instruções que estão dentro de um comentário na tag <script> . -->
-<!-- Não se esqueça de fazer um commit a cada exercício!
-Copiar -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Exercício 5.1</title>
-
-    <style>
-        main,
-        section {
-            border-color: black;
-            border-style: solid;
-        }
-
-        .title {
-            text-align: center;
-        }
-
-        .main-content {
-            background-color: yellow;
-        }
-
-        .main-content .center-content {
-            background-color: red;
-            width: 50%;
-            margin: 0 auto;
-        }
-
-        .main-content .center-content p {
-            font-style: italic;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 
 <body>
-    <header>
-        <h1 class="title">Exercício 5.1 - JavaEscripito </h1>
-    </header>
-    <main id="main-content" class="main-content">
-        <section id="center-content" class="center-content">
-            <p id="mensagem">Texto padrão do nosso site</p>
-            <p>-----</p>
-            <p>Trybe</p>
-        </section>
-    </main>
-    <script>
-        /*
-        Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
-        - document.getElementById()
-        - document.getElementsByClassName()
-        - document.getElementsByTagName()
-        1. Crie uma função que mude o texto na tag <p> para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto e sim realizando o exercício)*/
-        let mensagem = document.querySelector("#mensagem");
-        mensagem.textContent = "Me vejo tendo uma carreira de sucesso em programação";
 
-        /* 2. Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).*/
-
-        let conteudoPrincipal = document.querySelector("#main-content");
-        conteudoPrincipal.style.backgroundColor = "rgb(76, 164, 109)";
-
-        /*3. Crie uma função que mude a cor do quadrado vermelho para branco.*/
-
-        let conteudoCentral = document.querySelector("#center-content");
-        conteudoCentral.style.backgroundColor = "#fff";
-
-        /*4. Crie uma função que corrija o texto da tag <h1>.*/
-
-        let titulo = document.querySelector("h1");
-        let textoTitulo = titulo.textContent;
-        function corrige(texto) {
-            return "Exercício 5.1 - JavaScripit"
-        }
-        titulo.textContent = corrige(textoTitulo);
-
-        /*5. Crie uma função que modifique todo o texto da tag <p> para maiúsculo.*/
-
-        let paragrafo = document.querySelector("p");
-        let textoParagrafo = paragrafo.textContent;
-        function maiuscula(texto) {
-            return texto.toUpperCase();
-        }
-        paragrafo.textContent = maiuscula(textoParagrafo);
-
-        /*6. Crie uma função que exiba o conteúdo de todas as tags <p> no console.
-        */
-
-        let todoParagrafo = document.querySelectorAll("p");
-        for (let i = 0; i < todoParagrafo.length; i++) {
-            console.log(todoParagrafo[i].textContent)
-        }
-    </script>
 </body>
 
 </html>
