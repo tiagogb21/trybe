@@ -47,4 +47,9 @@ let info2 = {
   recorrente: "sim",
 };
 
-console.log(info2)
+for (let i in info) {
+  if (i === "recorrente") {
+    console.log("ambos recorrentes");
+  }
+  console.log(`${info[i]} e ${info2[i]}`)
+}
