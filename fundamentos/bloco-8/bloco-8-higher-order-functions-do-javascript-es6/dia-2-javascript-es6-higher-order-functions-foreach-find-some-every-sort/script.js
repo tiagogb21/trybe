@@ -174,10 +174,21 @@ console.log(nameAndAge());
 // 3 - Crie um array com todos os objetos que possuem gênero ficção científica ou fantasia.
 
 function fantasyOrScienceFiction() {
-  let booksOfFantasyOrScienceFiction = books.filter((value)=> value.genre==="Fantasia" || value.genre==="Ficção Científica")
-  return booksOfFantasyOrScienceFiction
+  let booksOfFantasyOrScienceFiction = books.filter(
+    (value) => value.genre === "Fantasia" || value.genre === "Ficção Científica"
+  );
+  return booksOfFantasyOrScienceFiction;
 }
 
-console.log(fantasyOrScienceFiction())
+console.log(fantasyOrScienceFiction());
+
+// 4 - Crie um array ordenado pelos livros com mais de 60 anos de publicação e ordene-o pelo livro mais velho.
+
+function oldBooksOrdered() {
+  let oldBooksOrdered = books.filter((value) => 2021 - value.releaseYear >= 60);
+  return oldBooksOrdered.sort((a, b) => a.releaseYear - b.releaseYear);
+}
+
+console.log(oldBooksOrdered());
 
 
