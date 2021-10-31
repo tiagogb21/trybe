@@ -265,3 +265,44 @@ function averageAge() {
 }
 
 console.log(averageAge());
+
+// 4 - Encontre o livro com o maior nome.
+
+function longestNamedBook() {
+  let storeNameBook = books[0].name.length;
+  books.reduce((value) =>
+    value > storeNameBook ? (value = storeNameBook) : ""
+  );
+  let longestNamedBook = books.filter((value) =>
+    value.name.length === storeNameBook ? value : ""
+  );
+  return longestNamedBook[0];
+}
+
+// 5 - Dada o array de nomes, retorne a quantidade de vezes em que aparecem a letra a maiúscula ou minúscula.
+
+const names = [
+  "Aanemarie",
+  "Adervandes",
+  "Akifusa",
+  "Abegildo",
+  "Adicellia",
+  "Aladonata",
+  "Abeladerco",
+  "Adieidy",
+  "Alarucha",
+];
+
+function containsA() {
+  let cont = 0;
+
+  let string = names
+    .reduce((acc, value) => acc.toLowerCase() + value.toLowerCase())
+    .split("");
+
+  string.map((value) => (value === "a" ? cont++ : ""));
+
+  return cont;
+}
+
+console.log(containsA());
