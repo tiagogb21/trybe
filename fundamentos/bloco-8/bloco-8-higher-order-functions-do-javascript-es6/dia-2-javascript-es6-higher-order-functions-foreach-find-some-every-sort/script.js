@@ -1,3 +1,5 @@
+// Parte 1:
+
 const books = [
   {
     id: 1,
@@ -139,6 +141,8 @@ function authorUnique() {
   return new Set(storeBirthYears).size === storeBirthYears.length;
 }
 
+// Parte 2:
+
 // 1 - Crie um array com strings no formato NOME_DO_LIVRO - GÊNERO_DO_LIVRO - NOME_DA_PESSOA_AUTORA
 
 function formatedBookNames() {
@@ -191,4 +195,49 @@ function oldBooksOrdered() {
 
 console.log(oldBooksOrdered());
 
+// 5 - Crie um array em ordem alfabética apenas com os nomes de todas as pessoas autoras de ficção científica ou fantasia.
 
+function fantasyOrScienceFictionAuthors() {
+  let fantasyOrScienceFictionAuthors = [];
+  books.forEach((value) =>
+    value.genre === "Fantasia" || value.genre === "Ficção Científica"
+      ? fantasyOrScienceFictionAuthors.push(value.author.name)
+      : ""
+  );
+  return fantasyOrScienceFictionAuthors.sort();
+}
+
+console.log(fantasyOrScienceFictionAuthors());
+
+// 6 - Crie um array com o nome de todos os livros com mais de 60 anos de publicação.
+
+function oldBooks() {
+  let oldBooks = [];
+  books.forEach((value) =>
+    2021 - value.releaseYear >= 60 ? oldBooks.push(value.name) : ""
+  );
+  return oldBooks;
+}
+
+// 7 - Encontre o nome do livro escrito pela pessoa cujo nome registrado começa com três iniciais (cada inicial termina com um ponto).
+
+function authorWith3DotsOnName() {
+  let a = books.filter((value)=>value.author.name.split(".").length - 1 === 3);
+  return a[0].name;
+}
+
+console.log(authorWith3DotsOnName())
+
+// Parte 3:
+
+// 1 - Dada uma matriz, transforme em um array.
+Copiar
+const arrays = [
+  ['1', '2', '3'],
+  [true],
+  [4, 5, 6],
+];
+
+function flatten() {
+  // escreva seu código aqui
+}
