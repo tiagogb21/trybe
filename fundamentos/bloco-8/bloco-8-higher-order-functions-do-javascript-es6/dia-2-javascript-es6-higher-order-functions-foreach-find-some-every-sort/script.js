@@ -222,22 +222,34 @@ function oldBooks() {
 // 7 - Encontre o nome do livro escrito pela pessoa cujo nome registrado começa com três iniciais (cada inicial termina com um ponto).
 
 function authorWith3DotsOnName() {
-  let a = books.filter((value)=>value.author.name.split(".").length - 1 === 3);
+  let a = books.filter(
+    (value) => value.author.name.split(".").length - 1 === 3
+  );
   return a[0].name;
 }
 
-console.log(authorWith3DotsOnName())
+console.log(authorWith3DotsOnName());
 
 // Parte 3:
 
 // 1 - Dada uma matriz, transforme em um array.
-Copiar
-const arrays = [
-  ['1', '2', '3'],
-  [true],
-  [4, 5, 6],
-];
+
+const arrays = [["1", "2", "3"], [true], [4, 5, 6]];
 
 function flatten() {
-  // escreva seu código aqui
+  let a = [];
+  return arrays.reduce((accumulator, currentValue) =>
+    accumulator.concat(currentValue)
+  );
 }
+
+console.log(flatten());
+
+// 2 - Crie uma string com os nomes de todas as pessoas autoras.
+
+function reduceNames() {
+  let names = books.reduce((acc, value) => acc + value.author.name + ", ");
+  return books[0].author.name + ", " + names.slice(15, names.length);
+}
+
+console.log(reduceNames());
