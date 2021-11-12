@@ -1,0 +1,14 @@
+{
+  "name": "bloco7-jest",
+  "version": "1.0.0",
+  "description": "\"bloco7 jest\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "tiago garbi",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^27.3.1"
+  }
+}
